@@ -4,6 +4,8 @@ Server-side anti-cheat for Roblox, written in Lua. I built it like a small IDS/I
 
 This repo is a showcase. WaveGuard runs on a live game, so the detection modules and the real thresholds stay private. What's here is the architecture, the scoring/logging side and the client scripts. The rest can be shown on request.
 
+Available on Roblox: [WaveGuard: Anti-Cheat System (Prototype)](https://www.roblox.com/games/132130727508224)
+
 ## Detection
 
 Movement, checked server-side:
