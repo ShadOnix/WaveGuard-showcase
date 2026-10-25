@@ -1,0 +1,14 @@
+# Real tuned config (thresholds stay private, see Config.example.lua)
+src/server/Config.lua
+
+# Roblox place / model files
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+
+# Local tools and OS files
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
