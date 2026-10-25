@@ -30,24 +30,17 @@ The kick is disguised as a normal Roblox connection error, so a cheater doesn't 
 
 ```
 src/
-  server/                       ServerScriptService/AntiCheat
-    MainServer                  state, scan loop, remotes, kick      (private)
-    ToolWatch, GuiWatch         tool and GUI authorization           (private)
-    InjectionDetector           injection traces                     (private)
-    TokenDistributor            heartbeat tokens                     (private)
-    AllowedTools, AllowedGuis   allowlists + server signatures       (private)
-    SuspicionManager.lua        suspicion score
-    Logger.lua                  merges duplicate logs
-    Config.example.lua          all settings, values removed
-  client/                       StarterPlayerScripts
+  server/
+    SuspicionManager.lua
+    Logger.lua
+    Config.example.lua
+  client/
     ClientHeartbeat.client.lua
     ClientAntiTamper.client.lua
     ClientGuiWatch.client.lua
 ```
 
-The server always has the final say. Client scripts only send extra signals since an exploiter can read or disable anything running on his machine, which is also why publishing them doesn't weaken anything.
-
-File names follow the [Rojo](https://rojo.space) convention: `.server.lua` is a Script, `.client.lua` a LocalScript, `.lua` a ModuleScript.
+Client scripts only report to the server. Anything on the client can be read by an exploiter anyway, so they're fine to publish.
 
 ## Testing
 
